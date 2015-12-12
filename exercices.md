@@ -42,4 +42,29 @@ années non bissextiles :  2001,2002,2003,1900,1800,1700
 
 ## Exercice 3 : Lister les nombres premiers inférieurs à 1000
 
-## Exercice 4 : Gestion d'étudiants
+ - Mettez en place une fonction permettant de savoir si un nombre donné est premier ou non (rappel : un nombre *premier* est un nombre qui n'est divisible que par 1 ou par lui même.
+ - En utilisant cette fonction, donnez la liste des 1000 premiers nombre premiers.
+
+Valeurs attendues :  http://mathenjeans.free.fr/amej/glossair/document/nbs_premier/1000_nombres_premiers.html
+
+## Exercice 4 : Trier un tableau d'entiers 
+
+ - Codez un programme permettant de trier par ordre croissant un tableau d'entier passé en paramètres
+
+## Exercice 5 : Gestion d'étudiants
+
+Un organisme de formation veut suivre les résultats de ses étudiants.
+Un étudiant est défini de la manière suivantes :
+ 
+ - Un nom
+ - Un prénom
+ - Une liste d'au maximum 20 notes.
+
+Le logiciel doit 
+
+ - permettre de calculer la moyenne de chaque élève, indiquer l'élève ayant la plus haute moyenne, l'élève ayant la plus basse moyenne.
+ - montrer son efficacité en simulant une classe d'étudiants
+
+## Exercice 5 : Moyenne pondérée
+ 
+ Fait en sorte que dans l'exercice précédent les notes puissent être pondérées par un coefficient (valeurs possibles du coefficient : 1, 2 et 3).
