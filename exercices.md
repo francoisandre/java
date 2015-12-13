@@ -51,6 +51,123 @@ Valeurs attendues :  http://mathenjeans.free.fr/amej/glossair/document/nbs_premi
 
  - Codez un programme permettant de trier par ordre croissant un tableau d'entier passé en paramètres
 
+**Correction** 
+
+**Classe TestTri**
+
+
+    package exercices;
+    import java.util.Arrays;
+    
+        public class TestTri {
+        	
+        	public static void main(String[] args) {
+        		int[] source = {25,5,13,9,9 ,6,77};
+        		int[] resultat = {5,6,9,9,13,25,77};
+        		
+        		Trieur trieur = new Trieur();
+        		int[] tmp1 = trieur.triCroissant(source);
+        		boolean result1 = sontEgaux(tmp1, resultat);
+        		if (result1 == true) {
+        			System.out.println("tmp1 est trié correctement");
+        		}
+        		else {
+        			System.out.println("tmp1 n'est pas trié correctement");
+        		}
+        		
+        		int[] tmp2 = Arrays.copyOf(source, source.length);
+        		Arrays.sort(tmp2);
+        		boolean result2 = sontEgaux(tmp2, resultat);
+        		if (result2 == true) {
+        			System.out.println("tmp2 est trié correctement");
+        		}
+        		else {
+        			System.out.println("tmp2 n'est pas trié correctement");
+        		}
+        		
+        	}
+        	
+        	public static boolean sontEgaux(int[] tableau1, int[] tableau2) {
+        		
+        		boolean result = true;
+        		
+        		if (tableau1.length != tableau2.length) {
+        			result = false;
+        		}
+        		else {
+        			for (int i = 0; i < tableau1.length; i++) {
+        				if (tableau1[i] != tableau2[i]) {
+        					result = false;
+        					break;
+        				}
+        			}
+        		}
+        		return result;
+        	}
+        
+        }
+
+
+**Classe Trieur**
+
+    package exercices;
+    
+    public class Trieur {
+    
+    	public int[] triCroissant(int[] source) {
+    		int[] result = new int[source.length];
+    		int[] tmp = copy(source);
+    		
+    		for (int i =0; i <source.length; i++) {
+    			int minimumValue = minimumValue(tmp);
+    			result[i] = minimumValue;
+    			tmp = deleteOneValue(tmp, minimumValue);
+    		}
+    		
+    		return result;
+    	}
+    	
+    	public int minimumValue(int[] tableau) {
+    		int result = tableau[0];
+    		for (int i = 0; i < tableau.length; i++) {
+    			if (tableau[i] < result) {
+    				result = tableau[i];
+    			}
+    		}
+    		return result;
+    	}
+    	
+    	public int[] copy(int[] tableau) {
+    		int[] result = new int[tableau.length];
+    		for (int i = 0; i < tableau.length; i++) {
+    				result[i] = tableau[i];
+    		}
+    		return result;
+    	}
+    	
+    	public int[] deleteOneValue(int[] tableau, int value) {
+    		boolean found = false;
+    		int[] result = new int[tableau.length-1];
+    		for (int i=0; i<result.length;i++) {
+    			if (found == true) {
+    				result[i] = tableau[i+1];
+    			}
+    			else {
+    				if (tableau[i] == value) {
+    					found = true;
+    					result[i] = tableau[i+1];
+    				}
+    				else {
+    					result[i] = tableau[i];
+    				}
+    				
+    			}
+    		}
+    		return result;
+    	}
+    
+    }
+
 ## Exercice 5 : Gestion d'étudiants
 
 Un organisme de formation veut suivre les résultats de ses étudiants.
