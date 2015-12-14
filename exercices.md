@@ -182,6 +182,25 @@ Le logiciel doit
  - permettre de calculer la moyenne de chaque élève, indiquer l'élève ayant la plus haute moyenne, l'élève ayant la plus basse moyenne.
  - montrer son efficacité en simulant une classe d'étudiants
 
-## Exercice 5 : Moyenne pondérée
+## Exercice 5b : Moyenne pondérée
  
  Fait en sorte que dans l'exercice précédent les notes puissent être pondérées par un coefficient (valeurs possibles du coefficient : 1, 2 et 3).
+
+## Exercice 6 (Pour les curieux) : l'ordinateur a-t'il raison ?
+
+**objectif** : Simuler le jeu suivant pour pouvoir répondre à la question finale
+
+Derrière 3 portes ont été placés aléatoirement :
+
+- 1 voiture
+- 2 chèvres
+
+Pour gagner la voiture, un joueur doit deviner derrière quelle porte elle se cache.
+
+Voici comment se déroule le jeu :
+
+-Le joueur choisit la porte de son choix
+-L'ordinateur indique parmi les autres porte, une porte cachant une chèvre
+-Le joueur choisit alors de conserver son choix initial ou de choisir l'autre porte
+
+**Question : quelle est la probabilité de gagner la voiture si le joueur décide de conserver son choix initial ?**
