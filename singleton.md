@@ -9,6 +9,9 @@ Afin d'éviter d'épuiser les connexions disponibles - mais aussi pour des raiso
 
 ## Implémentation
 
+### Diagramme UML
+![enter image description here](https://raw.githubusercontent.com/francoisandre/java/master/images/singletonUML.png)
+
 ### Le singleton
 
     package designpatterns.singleton;
@@ -46,5 +49,5 @@ Afin d'éviter d'épuiser les connexions disponibles - mais aussi pour des raiso
 ## Remarques
  - Dans un Singleton, l'usage veut que la méthode permettant de récupérer l'instance unique soit appelée *getInstance*. Parfois le nom de la classe comporte également le suffixe "Singleton".
  - Il est important de noter l'absence de constructeur public pour empêcher une instanciation directe de la classe 
- - L'impl�mentation ci-dessus est très simple. Elle souffre de certains défauts, notamment la non prise en compte des accès concurrents (multithreading) 
+ - L'implémentation ci-dessus est très simple. Elle souffre de certains défauts, notamment la non prise en compte des accès concurrents (multithreading) 
 
