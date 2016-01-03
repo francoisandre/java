@@ -1,28 +1,28 @@
 # Les Design Patterns
 
 ## Introduction
-Les *[design patterns](https://fr.wikipedia.org/wiki/Patron_de_conception)* (ou *modèles de conception*) proposent des réponses efficaces à base de modélisation objets à des problèmes fréquemment rencontrés.
+Les *[design patterns](https://fr.wikipedia.org/wiki/Patron_de_conception)* (ou *modÃ¨les de conception*) proposent des rÃ©ponses efficaces Ã  base de modÃ©lisation objets Ã  des problÃ¨mes frÃ©quemment rencontrÃ©s.
 
-Ainsi, chaque design pattern sera définie par 
+Ainsi, chaque design pattern sera dÃ©finie par 
 
 - Son nom
-- Le problème qu'il cherche à résoudre
-- Le diagramme UML proposé pour répondre au problème
+- Le problÃ¨me qu'il cherche Ã  rÃ©soudre
+- Le diagramme UML proposÃ© pour rÃ©pondre au problÃ¨me
 
-Les premiers design patterns ont été mis en évidence dans le livre  [Design patterns. Catalogue des modèles de conception réutilisables](https://fr.wikipedia.org/wiki/Design_Patterns) qui en définit 23. D'autres modèles de conception ont été développés ultérieurement par d'autres auteurs. Citons par exemple
+Les premiers design patterns ont Ã©tÃ© mis en Ã©vidence dans le livre  [Design patterns. Catalogue des modÃ¨les de conception rÃ©utilisables](https://fr.wikipedia.org/wiki/Design_Patterns) qui en dÃ©finit 23. D'autres modÃ¨les de conception ont Ã©tÃ© dÃ©veloppÃ©s ultÃ©rieurement par d'autres auteurs. Citons par exemple
 
- - L'[inversion de contrôle](https://fr.wikipedia.org/wiki/Inversion_de_contr%C3%B4le)
- - Le [modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)
+ - L'[inversion de contrÃ´le](https://fr.wikipedia.org/wiki/Inversion_de_contr%C3%B4le)
+ - Le [modÃ¨le-vue-contrÃ´leur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)
  - les [Enterprise Integration Patterns](https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns)
  - Le [DAO](https://fr.wikipedia.org/wiki/Objet_d%27acc%C3%A8s_aux_donn%C3%A9es)
 
-On trouve sur Internet différentes implémentations de ces différents modèles de conception pour la plupart des langages objets.
+On trouve sur Internet diffÃ©rentes implÃ©mentations de ces diffÃ©rents modÃ¨les de conception pour la plupart des langages objets.
 
-On trouve également la notion d'[antipattern](https://fr.wikipedia.org/wiki/Antipattern) qui correspond à la *fausse bonne idée*, c'est à dire l'erreur commune que l'on peut rencontrer en programmation objet qui semblait être pourtant une solution efficace au premier abord.
+On trouve Ã©galement la notion d'[antipattern](https://fr.wikipedia.org/wiki/Antipattern) qui correspond Ã  la *fausse bonne idÃ©e*, c'est Ã  dire l'erreur commune que l'on peut rencontrer en programmation objet qui semblait Ãªtre pourtant une solution efficace au premier abord.
 
-L'étude des deux concepts - patterns et antipatterns - s'avère utile et fructueuse. Entre autre il permet aux développeurs et aux concepteurs de mettre en place un vocabulaire complémentaire dans le domaine de la modélisation.
+L'Ã©tude des deux concepts - patterns et antipatterns - s'avÃ¨re utile et fructueuse. Entre autre il permet aux dÃ©veloppeurs et aux concepteurs de mettre en place un vocabulaire complÃ©mentaire dans le domaine de la modÃ©lisation.
 
-Nous allons lister les principaux modèles de conception.
+Nous allons lister les principaux modÃ¨les de conception.
 
 
 

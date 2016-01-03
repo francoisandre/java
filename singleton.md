@@ -1,13 +1,13 @@
 # Singleton
 
-## Problème
-Restreindre le nombre d'instance d'une classe. Généralement à une seule instance. 
+## ProblÃ¨me
+Restreindre le nombre d'instance d'une classe. GÃ©nÃ©ralement Ã  une seule instance. 
 
 ## Exemple
-Les bases de données ont souvent une nombre maximal de connexion autorisées.
-Afin d'éviter d'épuiser les connexions disponibles - mais aussi pour des raisons de performances - il peut être préférable de laisser ouverte une connexion vers une base de données et de faire en sorte que chaque appel à la base de données utilise cette connexion.
+Les bases de donnÃ©es ont souvent une nombre maximal de connexion autorisÃ©es.
+Afin d'Ã©viter d'Ã©puiser les connexions disponibles - mais aussi pour des raisons de performances - il peut Ãªtre prÃ©fÃ©rable de laisser ouverte une connexion vers une base de donnÃ©es et de faire en sorte que chaque appel Ã  la base de donnÃ©es utilise cette connexion.
 
-## Implémentation
+## ImplÃ©mentation
 
 ### Le singleton
 
@@ -44,7 +44,7 @@ Afin d'éviter d'épuiser les connexions disponibles - mais aussi pour des raisons
 ### 
 
 ## Remarques
- - Dans un Singleton, l'usage veut que la méthode permettant de récupérer l'instance unique soit appelée *getInstance*. Parfois le nom de la classe comporte également le suffixe "Singleton".
- - Il est important de noter l'absence de constructeur public pour empêcher une instanciation directe de la classe 
- - L'implémentation ci-dessus est très simple. Elle souffre de certains défauts, notamment la non prise en compte des accès concurrents (multithreading) 
+ - Dans un Singleton, l'usage veut que la mÃ©thode permettant de rÃ©cupÃ©rer l'instance unique soit appelÃ©e *getInstance*. Parfois le nom de la classe comporte Ã©galement le suffixe "Singleton".
+ - Il est important de noter l'absence de constructeur public pour empÃªcher une instanciation directe de la classe 
+ - L'implï¿½mentation ci-dessus est trÃ¨s simple. Elle souffre de certains dÃ©fauts, notamment la non prise en compte des accÃ¨s concurrents (multithreading) 
 
