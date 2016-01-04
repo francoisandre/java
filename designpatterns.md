@@ -25,6 +25,7 @@ L'étude des deux concepts - patterns et antipatterns - s'avère utile et fructu
 Nous allons lister les principaux modèles de conception.
 
 1. [Singleton](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/francoisandre/java/master/singleton.md)
+2. [Iterator](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/francoisandre/java/master/iterator.md)
 
 
 
