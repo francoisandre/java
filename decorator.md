@@ -1,37 +1,37 @@
 # Decorator
 
-## Problème
-Attacher dynamiquement de nouvelles responsabilités à un objet.
+## ProblÃ¨me
+Attacher dynamiquement de nouvelles responsabilitÃ©s Ã  un objet.
 
-Lorsqu'on a un objet de base et que l'on souhaite lui ajouter de nouveaux comportements le premier réflexe du développeur est l'héritage.
+Lorsqu'on a un objet de base et que l'on souhaite lui ajouter de nouveaux comportements le premier rÃ©flexe du dÃ©veloppeur est l'hÃ©ritage.
 
 Toutefois, parfois cette approche n'est pas la meilleure. Le design pattern *Decorator* est parfois une astucieuse alternative.
 
 ## Exemple
 
-Supposons que notre objectif est d'imprimer des factures. Nous avons un objet de base représentant le corps d'une facture.
+Supposons que notre objectif est d'imprimer des factures. Nous avons un objet de base reprÃ©sentant le corps d'une facture.
 
-Nous savons que nous allons devoir ajouter plusieurs comportements à notre impression de facture. En effet, dans certains cas nous allons ajouter un en-tête, dans d'autre un pied de page, parfois une carte, parfois plusieurs de ces composants.
+Nous savons que nous allons devoir ajouter plusieurs comportements Ã  notre impression de facture. En effet, dans certains cas nous allons ajouter un en-tÃªte, dans d'autre un pied de page, parfois une carte, parfois plusieurs de ces composants.
 
 ### Approche brutale  
 On pourrait commencer par faire une classe *FactureBasique*, une classe *FactureAvecEntete*, une classe *FactureAvecPiedDePage*, une classe *FactureAvecEnteteEtPiedDePage*...
 
 ### Limitations de l'approche brutale
-On voit bien que la stratégie est mauvaise car elle aborde la complexité du problème de la mauvaise manière. En effet, les classes vont se multiplier pour couvrir tous les cas et l'ajout d'un nouveau comportement obligerait à créer un très grand nombre de classe.
+On voit bien que la stratÃ©gie est mauvaise car elle aborde la complexitÃ© du problÃ¨me de la mauvaise maniÃ¨re. En effet, les classes vont se multiplier pour couvrir tous les cas et l'ajout d'un nouveau comportement obligerait Ã  crÃ©er un trÃ¨s grand nombre de classe.
 
-### Le décorator
-Pour être le plus efficace, au lieu d'utiliser un ajout de comportement de manière verticale avec l'héritage, le *Decorator* va proposer une démarche plus horizontale - basée sur la composition -  où les différents composants vont s’emboîter de manière sélective en ajoutant chacun un comportement.
+### Le dÃ©corator
+Pour Ãªtre le plus efficace, au lieu d'utiliser un ajout de comportement de maniÃ¨re verticale avec l'hÃ©ritage, le *Decorator* va proposer une dÃ©marche plus horizontale - basÃ©e sur la composition -  oÃ¹ les diffÃ©rents composants vont sâ€™emboÃ®ter de maniÃ¨re sÃ©lective en ajoutant chacun un comportement.
 
-## Implémentation
+## ImplÃ©mentation
 ### Diagramme UML
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Decorator_UML_class_diagram.svg/606px-Decorator_UML_class_diagram.svg.png)
 
 
-Les points importants à noter pour comprendre le mécanisme sont les suivants :
+Les points importants Ã  noter pour comprendre le mÃ©canisme sont les suivants :
 
--  On définit une interface générique (*Component*) qui va définir le comportement de base de notre objet.
-- Il y a au moins une implémentation directe de cette interface (*ConcreteComponent*)
-- Les autres classes vont décorer la classe *ConcreteComponent* en définissant une chaine de *Component*. Le *Decorator* va stocker la chaîne des précédents *Component* et chaque *ConcreteDecorator* va ajouter un traitement à celui retourné par cette chaîne.  Chaque *ConcreteDecorator* va recevoir la chaîne dans son constructeur.
+-  On dÃ©finit une interface gÃ©nÃ©rique (*Component*) qui va dÃ©finir le comportement de base de notre objet.
+- Il y a au moins une implÃ©mentation directe de cette interface (*ConcreteComponent*)
+- Les autres classes vont dÃ©corer la classe *ConcreteComponent* en dÃ©finissant une chaine de *Component*. Le *Decorator* va stocker la chaÃ®ne des prÃ©cÃ©dents *Component* et chaque *ConcreteDecorator* va ajouter un traitement Ã  celui retournÃ© par cette chaÃ®ne.  Chaque *ConcreteDecorator* va recevoir la chaÃ®ne dans son constructeur.
 
 Dans notre cas, cela donne ceci :
 
@@ -74,11 +74,11 @@ Dans notre cas, cela donne ceci :
     	}
     }
 
-**Remarque** : le *Decorator* est abstrait et implémente le *Component* et introduit le constructeur prenant un *Component* comme argument .
+**Remarque** : le *Decorator* est abstrait et implÃ©mente le *Component* et introduit le constructeur prenant un *Component* comme argument .
 
 ### Quelques exemple de ConcreteDecorator
 
-Nous allons introduire 3 comportements - en-tête, pied de page et carte. Il nous suffira d'une classe par comportement.
+Nous allons introduire 3 comportements - en-tÃªte, pied de page et carte. Il nous suffira d'une classe par comportement.
 
 #### FactureAvecEntete 
 
@@ -94,7 +94,7 @@ Nous allons introduire 3 comportements - en-tête, pied de page et carte. Il nous
     	public String print() {
     		StringBuilder sb = new StringBuilder();
     		sb.append("-----------------\n");
-    		sb.append("Voici l'en-tête \n");
+    		sb.append("Voici l'en-tÃªte \n");
     		sb.append("-----------------\n");
     		sb.append(previousFacture.print());
     		return sb.toString();
@@ -156,12 +156,12 @@ Nous allons introduire 3 comportements - en-tête, pied de page et carte. Il nous
     		Facture factureAvecEnteteEtPiedDePage = new FactureAvecPiedDePage(new FactureAvecEntete(new DefaultFacture()));
     		Facture factureAvecCarteEtPiedDePage = new FactureAvecPiedDePage(new FactureAvecCarte(new DefaultFacture()));
     
-    		System.out.println("Facture par défaut :");
+    		System.out.println("Facture par dÃ©faut :");
     		System.out.println("");
     		System.out.println(defaultFacture.print());
     		System.out.println("");
     
-    		System.out.println("Facture avec en-tête :");
+    		System.out.println("Facture avec en-tÃªte :");
     		System.out.println("");
     		System.out.println(factureAvecEntete.print());
     		System.out.println("");
@@ -171,7 +171,7 @@ Nous allons introduire 3 comportements - en-tête, pied de page et carte. Il nous
     		System.out.println(factureAvecPiedDePage.print());
     		System.out.println("");
     
-    		System.out.println("Facture avec en-tête et pied de page :");
+    		System.out.println("Facture avec en-tÃªte et pied de page :");
     		System.out.println("");
     		System.out.println(factureAvecEnteteEtPiedDePage.print());
     		System.out.println("");
@@ -188,18 +188,18 @@ La philosophie centrale du *Decorator* qui apparait clairement lors de l'instanc
 
     Facture factureAvecEnteteEtPiedDePage = new FactureAvecPiedDePage(new FactureAvecEntete(new DefaultFacture()));
 
-On voit bien l’enchaînement des *ConcreteDecorator* qui se termine par le *ConcreteComponent*.
+On voit bien lâ€™enchaÃ®nement des *ConcreteDecorator* qui se termine par le *ConcreteComponent*.
 
 ## Conclusion
-Dans Eclipse, le concept de décorateur est très utilisé. L'exemple de l'arbre des projets est très représentatif.
+Dans Eclipse, le concept de dÃ©corateur est trÃ¨s utilisÃ©. L'exemple de l'arbre des projets est trÃ¨s reprÃ©sentatif.
 
-Chaque fichier est associé à une icone - qui est notre *ConcreteComponent* - et chaque module complémentaire (Git, Java, M2E,...) va ajouter des *ConcreteDecorator* qui vont chacun ajouter une surcouche à l'icone de base: une croix sur les fichiers ne compilant pas, un "J" et un "M" sur le projet Java mavenisé... 
+Chaque fichier est associÃ© Ã  une icone - qui est notre *ConcreteComponent* - et chaque module complÃ©mentaire (Git, Java, M2E,...) va ajouter des *ConcreteDecorator* qui vont chacun ajouter une surcouche Ã  l'icone de base: une croix sur les fichiers ne compilant pas, un "J" et un "M" sur le projet Java mavenisÃ©... 
 
 ![enter image description here](https://raw.githubusercontent.com/francoisandre/java/master/images/arbre.png)
 
-Les décorateurs peuvent même paramétrés dans les préférences d'Eclipse...dans les rubriques *Decorations*.
+Les dÃ©corateurs peuvent mÃªme paramÃ©trÃ©s dans les prÃ©fÃ©rences d'Eclipse...dans les rubriques *Decorations*.
 
 ## Il y a plus...
-Dans le JDK, une série de classes assez importante est basée sur le concept de Decorator, Mais pour l'étudiant débutant n'a pas souvent connaissance de ce concept au moment où il aborde ces classes ce qui les rend difficilement compréhensibles...
+Dans le JDK, une sÃ©rie de classes assez importante est basÃ©e sur le concept de Decorator, Mais pour l'Ã©tudiant dÃ©butant n'a pas souvent connaissance de ce concept au moment oÃ¹ il aborde ces classes ce qui les rend difficilement comprÃ©hensibles...
 
-...à suivre...
+...Ã  suivre...
