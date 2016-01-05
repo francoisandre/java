@@ -29,9 +29,6 @@ L'interface Iterator est la suivante :
 
 Elle est présente nativement dans Java (https://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html) et est le moyen privilégié de parcourir les objets de type *List* ou *Set*. Cette version de l'Iterator utilise la notion de *generics* non encore étudiée. Elle rajoute également la méthode *remove()* qui est optionnelle.
 
-### Diagramme UML
-![enter image description here]
-
 ###La classe Thermomètre
 
     package designpatterns.iterator;
