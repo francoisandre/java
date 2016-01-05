@@ -1,4 +1,4 @@
-# Singleton
+# Iterator
 
 ## Problème
 Parcourir un ensemble de données 
