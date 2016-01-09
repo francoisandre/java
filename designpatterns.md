@@ -27,6 +27,6 @@ Nous allons lister les principaux modèles de conception.
 1. [Singleton](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/francoisandre/java/master/singleton.md)
 2. [Iterator](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/francoisandre/java/master/iterator.md)
 3. [Decorator](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/francoisandre/java/master/decorator.md)
-
+4. [Observer](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/francoisandre/java/master/observer.md)
 
 
