@@ -67,7 +67,7 @@ Dans notre cas, Notre abonné correspond à Observer et la méthode *deposeBoite
 
 Le Subject correspond à l'éditeur. Il maintient une liste d'abonnés. Les abonnées peuvent s'abonner (*registerObserver*) ou se désabonner (*unregisterObserver*).
 
-Enfin, la méthode notifyObservers 
+Enfin, la méthode notifyObservers parcourt les différents Observers afin de les notifier de l'événement.
 
 ###Exercice : Application dans le la page de connexion
 
